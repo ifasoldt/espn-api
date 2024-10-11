@@ -10,6 +10,7 @@ class Player(object):
         self.posRank = json_parsing(data, 'positionalRanking')
         self.eligibleSlots = [POSITION_MAP[pos] for pos in json_parsing(data, 'eligibleSlots')]
         self.acquisitionType = json_parsing(data, 'acquisitionType')
+        self.keeperValueFuture = json_parsing(data, 'keeperValueFuture')
         self.proTeam = PRO_TEAM_MAP[json_parsing(data, 'proTeamId')]
         self.injuryStatus = json_parsing(data, 'injuryStatus')
         self.onTeamId = json_parsing(data, 'onTeamId')
